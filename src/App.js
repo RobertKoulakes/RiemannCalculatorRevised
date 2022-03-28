@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import SearchField from './SearchField.js';
+import SumType from './SumType';
+import SampleGraph from './SampleGraph';
+import background from './MathBackground.jpeg';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{backgroundImage: `url(${background})`}}>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h1>RiemannCalculator</h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Version 2.0; new and improved!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>
+          The RiemannCalculator allows you to enter a function of your choice (limited to polynomials at the moment) and graph the chosen Riemann sum for the given equation. You can choose from left-hand, right-hand, and midpoint sums!
+        </p>
       </header>
+      <SearchField />
+      <SumType />
+      <SampleGraph />
     </div>
   );
 }
